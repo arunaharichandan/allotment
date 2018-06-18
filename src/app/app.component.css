@@ -1,0 +1,41 @@
+.custom-border {
+ border: 1px solid #ddd;
+ line-height: 4em;
+ margin-left: 0em;
+ margin-right: 0em;
+}
+
+
+.standard-color {
+  color: rgb(44, 53, 185);
+}
+.color-red {
+  color: rgb(236, 49, 90);
+}
+
+
+.icon-size {
+  font-size: 2em;
+}
+
+.label-room {
+ margin-left: 1em;
+}
+
+.label-adult {
+  margin-left: 1.8em;
+}
+
+.label-children {
+margin-left: 1.7em;
+}
+
+.heading {
+  font-size: 2em;
+  margin-left: 0.5em;
+}
+
+.disabled {
+  
+  cursor: auto;
+}

@@ -1,0 +1,69 @@
+<div class="row">
+  &nbsp;
+</div>
+<div class="row">
+  <div class="col-md-12 col-sm-12">
+    <p class="standard-color">
+      <i class="fa fa-group icon-size"></i> <span class="heading">Choose Number of <b>People</b></span></p>
+
+    <div class="col-md-6 col-sm-6 col-md-offset-3 custom-border">
+      <div class="row">
+        <div class="col-md-6 col-sm-6">
+          <span class="standard-color">
+            <i class="fa fa-bed icon-size" aria-hidden="true"></i> <span class="label-room">ROOMS</span></span>
+        </div>
+        <div class="col-md-6 col-sm-6 text-right">
+          <button [disabled]="allotmentConfig.rooms===1" (click)="minusOneRoom()">
+            <span >
+              <i class="fa fa-minus-circle standard-color icon-size" aria-hidden="true"></i>
+            </span>
+          </button>
+          <span class="icon-size">{{allotmentConfig.rooms}}</span>
+          <button [disabled]="allotmentConfig.rooms===5" (click)="plusOneRoom()">
+            <span>
+              <i class="fa fa-plus-circle color-red icon-size" aria-hidden="true"></i>
+            </span>
+          </button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 col-sm-6">
+          <span class="standard-color">
+            <i class="fa fa-user icon-size" aria-hidden="true"></i> <span class="label-adult">ADULTS</span></span>
+        </div>
+        <div class="col-md-6 col-sm-6 text-right">
+          <button [disabled]="this.allotmentConfig.rooms === this.allotmentConfig.adults" (click)="minusOneAdult()">
+            <span>
+              <i class="fa fa-minus-circle standard-color icon-size" aria-hidden="true"></i>
+            </span>
+          </button>
+          <span class="icon-size">{{allotmentConfig.adults}}</span>
+          <button [disabled]="disableIfRoomFull()" (click)="plusOneAdult()">
+            <span>
+              <i class="fa fa-plus-circle color-red icon-size" aria-hidden="true"></i>
+            </span>
+          </button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 col-sm-6">
+          <span class="standard-color">
+            <i class="fa fa-child icon-size" aria-hidden="true"></i> <span class="label-children">CHILDREN</span></span>
+        </div>
+        <div class="col-md-6 col-sm-6 text-right">
+          <button [disabled]="allotmentConfig.childrens===0" (click)="minusOneChildren()">
+            <span>
+              <i class="fa fa-minus-circle standard-color icon-size" aria-hidden="true"></i>
+            </span>
+          </button>
+          <span class="icon-size">{{allotmentConfig.childrens}}</span>
+          <button [disabled]="disableIfRoomFull()" (click)="plusOneChildren()">
+            <span>
+              <i class="fa fa-plus-circle color-red icon-size" aria-hidden="true"></i>
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
